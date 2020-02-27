@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:edge
 MAINTAINER Dieffrei T. Quadros <dieffrei.quadros@globalinter.net>
 
 # Add packages
