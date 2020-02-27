@@ -47,7 +47,7 @@ RUN addgroup -S pptruser && adduser -S -g pptruser pptruser \
     && chown -R pptruser:pptruser /app
 
 # Copy build files
-COPY build /build/
+#COPY build /build/
 
 # Setup entry point to use umask 0000 and run bash
 COPY docker-entrypoint.sh /entrypoint.sh
