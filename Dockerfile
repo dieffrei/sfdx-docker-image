@@ -22,7 +22,8 @@ RUN apk --no-cache add \
     harfbuzz \
     ca-certificates \
     ttf-freefont \
-    yarn    
+    yarn \
+    dbus
 
 # Install SFDX
 RUN npm install sfdx-cli --global
