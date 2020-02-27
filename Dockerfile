@@ -20,9 +20,6 @@ RUN apk --no-cache add \
     --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ \
     --allow-untrusted
 
-# Copy build files
-COPY build /build/
-
 # Install SFDX
 RUN npm install sfdx-cli --global
 RUN sfdx --version
