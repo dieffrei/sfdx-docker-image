@@ -1,6 +1,7 @@
 FROM salesforce/salesforcedx
 MAINTAINER Dieffrei T. Quadros <dieffrei.quadros@globalinter.net>
 
+RUN apt install -y chromium-browser
 RUN echo 'y' | sfdx plugins:install texei-sfdx-plugin
 RUN echo 'y' | sfdx plugins:install sfdx-codescan-plugin
 RUN echo 'y' | sfdx plugins:install json-bourne-sfdx
