@@ -46,11 +46,11 @@ RUN addgroup -S pptruser && adduser -S -g pptruser pptruser \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser /app
 
-# Run everything after as non-privileged user.
-USER pptruser
-
 # Setup entry point to use umask 0000 and run bash
 COPY docker-entrypoint.sh /entrypoint.sh
 RUN chmod ugo+x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 # EOF
+
+# Run everything after as non-privileged user.
+USER pptruser
