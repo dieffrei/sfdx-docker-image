@@ -25,6 +25,8 @@ RUN apk --no-cache add \
     yarn \
     dbus
 
+RUN dbus-uuidgen > /var/lib/dbus/machine-id
+
 # Install SFDX
 RUN npm install sfdx-cli --global
 RUN sfdx --version
