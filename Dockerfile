@@ -23,7 +23,9 @@ RUN apk --no-cache add \
     ca-certificates \
     ttf-freefont \
     yarn \
-    dbus
+    dbus && apk add apache-ant --no-cache --update-cache \
+    --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ \
+    --allow-untrusted
 
 RUN dbus-uuidgen > /var/lib/dbus/machine-id
 
