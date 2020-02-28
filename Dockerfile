@@ -23,6 +23,11 @@ RUN apk --no-cache add \
     ca-certificates \
     ttf-freefont \
     yarn \
+    xorg-server \ 
+    xf86-video-vesa \
+    xf86-input-evdev \ 
+    xf86-input-mouse \
+    xf86-input-keyboard udev \
     dbus && apk add apache-ant --no-cache --update-cache \
     --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ \
     --allow-untrusted
